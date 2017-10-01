@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {
-    NgbCarouselModule,
-    NgbAlertModule
-} from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarouselModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
@@ -15,6 +12,10 @@ import {
 } from './components';
 import { StatModule } from '../../shared';
 
+// begin ML
+import { ChartsModule as Ng2Charts } from 'ng2-charts';
+// end  ML
+
 @NgModule({
     imports: [
         CommonModule,
@@ -22,6 +23,9 @@ import { StatModule } from '../../shared';
         NgbAlertModule.forRoot(),
         DashboardRoutingModule,
         StatModule,
+        //begin ML
+        Ng2Charts,
+        //end ML
     ],
     declarations: [
         DashboardComponent,
